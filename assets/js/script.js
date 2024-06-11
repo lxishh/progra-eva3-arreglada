@@ -215,16 +215,16 @@ const actualizar = ()=>{
    let vGenero = eGenero.value;
    let vAreatexto = eAreatexto.value;
    let vTerminos = eTerminos.checked;
-}
+
 
 
    let objeto = {nombre:vNombre, correo:vCorreo, contraseña:vContraseña, telefono:vTelefono,
        fecha:vFecha, genero:vGenero, descripcion:vAreatexto, terminos:vTerminos};
-   let id = document.getElementById("btnActualizar")
+   let id = document.getElementById("btnActualizar").value;
    
    actualizarSocio(objeto,id).then(()=>{
        alert("Se ha actualizado con éxito");
        cargarDatos();
    });
-
+}
 
