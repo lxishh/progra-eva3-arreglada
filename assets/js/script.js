@@ -124,13 +124,14 @@ const registrar = ()=>{
 
 
     let objeto = {nombre:vNombre, correo:vCorreo, contraseña:vContraseña, telefono:vTelefono,
-        fecha:vFecha, genero:vGenero, descripcion:vAreatexto, terminos:vTerminos};
+        fecha:vFecha, genero:vGenero, areatexto:vAreatexto, terminos:vTerminos};
     
     // console.log(objeto)
 
     //Se usa la función de promesas.
     registrarSocios(objeto).then(()=>{
         alert("Registrado con éxito")
+        cargarDatos()
     }).catch((r)=>{
         alert("Ocurrió un error")
         alert(r);
@@ -161,7 +162,24 @@ const cargarDatos = ()=>{
             let botonUPD = document.getElementById("UPD"+socio.id);
             botonUPD.addEventListener("click", ()=>{
                 let eNombre = document.getElementById("UPDnombre");
+                let eCorreo = document.getElementById("UPDcorreo");
+                let eContraseña = document.getElementById("UPDcontraseña");
+                let eTelefono = document.getElementById("UPDtelefono");
+                let eFecha = document.getElementById("UPDfecha");
+                let eGenero = document.getElementById("UPDgenero");
+                let eAreatexto = document.getElementById("UPDareatexto");
+                let eTerminos = document.getElementById("UPDterminos");
+                
+                // faltaba ponerle el .value
                 eNombre.value = socio.nombre;
+                eCorreo.value = socio.correo;
+                eContraseña.value = socio.contraseña;
+                eTelefono.value = socio.telefono;
+                eFecha.value = socio.fecha;
+                eGenero.value = socio.genero;
+                eAreatexto.value = socio.areatexto;
+                eTerminos.value = socio.terminos;
+
                 document.getElementById("btnActualizar").value = socio.id;
             })
 

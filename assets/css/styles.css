@@ -207,3 +207,19 @@ p.noDisplay{
     display: none;
     color: red;
 }
+
+.tabla{
+    width: 80%;
+    margin: auto;
+    background-color: gray;
+    margin: 50px
+}
+.form2{
+    width: 50%;
+    margin: auto;
+    background-color: gray;
+}
+
+.form2 label,input, button{
+    display: block;
+}

@@ -20,12 +20,14 @@ export const obtenerSocios = async() =>{
     return listado;
 }
 
+// había que escribir "socios" en vez de socio
+
 export const actualizarSocio = async(objeto,id)=>{
-    const ref = doc(db,"socio",id)
+    const ref = doc(db,"socios",id)
     await updateDoc(ref, objeto);
 }
 
 export const eliminarSocio = async(id)=>{
-    const ref = doc(db,"socio",id);
+    const ref = doc(db,"socios",id);
     await deleteDoc(ref);
 }

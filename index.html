@@ -119,7 +119,7 @@
 
         </section>
 
-        <table>
+        <table class="tabla">
             <thead>
                 <tr>
                     <th>Nombre</th>
@@ -135,13 +135,13 @@
             <tbody id="tbDatos"></tbody>
         </table>
 
-        <div>
+        <div class="form2">
             <h1>Actualizar Datos</h1>
             <label for="UPDnombre">Nombre*</label>
-                <input type="text" name="UPDnombre" id="nombre" placeholder="Ingresa tu nombre" required>
+                <input type="text" name="UPDnombre" id="UPDnombre" placeholder="Ingresa tu nombre" required>
                 <p class="noDisplay" id="UPDpnombre">Debes ingresar un nombre</p>
 
-                <label for="correo">Correo*</label>
+                <label for="UPDcorreo">Correo*</label>
                 <input type="email" name="UPDcorreo" id="UPDcorreo" placeholder="Ingresa tu correo" required>
                 <p class="noDisplay" id="pcorreo">Debes ingresar un correo</p>
 
@@ -170,10 +170,10 @@
                 <textarea name="UPDareatexto" id="UPDareatexto" placeholder="Escribe una breve descripción de ti"></textarea>
                 <p class="noDisplay" id="pareatexto">Debes entregar una descripción de usted.</p>
 
-                <div id="div-termino"> 
+                <!-- <div id="div-termino"> 
                 <label for="terminos">Acepta terminos y condiciones*</label>
                 <input type="checkbox" name="UPDterminos" id="UPDterminos">
-                </div>
+                </div> -->
 
                 <button type="button" id="btnActualizar">Enviar</button>
         </div>
