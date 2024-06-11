@@ -1,0 +1,209 @@
+/* A continuación se importara el css aplicado en la evaluación 2 */
+
+
+/* Se le quita el margin a la pagina en general y se le asigna la fuente */
+*{
+    margin:0;
+    font-family: sans-serif
+}
+
+/* header decorativo */
+#pheader{
+    text-align: center;
+    background-color:gray
+}
+
+
+
+/* Se crea un nav para poder navegar a traves de la pagina */
+#pnav{
+    background-color:black;
+    display: block;
+    text-align: center;
+}
+
+/* se quita la linea debajo de cada lista y se cambia el display para que esten todas a la misma "altura" */
+#pnav ul,li,a{
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+    margin: 5px;
+}
+
+/* se cambia el color del texto que se encuentra en nav */
+#pnav li a{
+    color: white;
+}
+
+
+
+/* se le asigna un margin auto a toda la pagina para que se centre
+y ademas se le asigna el color de fondo */
+#pmain{
+    margin: auto;
+}
+
+
+
+/* se define un estilo predeterminado para cada H2 que se encuentre dentro de una seccion */
+section h2{
+    margin-top: 13px;
+    margin-bottom: 6px;
+}
+
+/* se modifican las distintas seccions a traves de su id */
+#problema{
+    margin: auto;
+    padding-top: 5px;
+    margin-bottom: 50px;
+    /* width: 30%; */
+    text-align: center;
+}
+
+#problema p{
+    width: 30%;
+    text-align: justify;
+    margin: auto;
+}
+
+
+#solucion{
+    margin: auto;
+    margin-bottom: 50px;
+    /* width: 30%; */
+    text-align: center;
+}
+
+#solucion p{
+    width: 30%;
+    text-align: justify;
+    margin: auto;
+}
+
+
+#mision{
+    margin: auto;
+    margin-bottom: 50px;
+    /* width: 30%; */
+    text-align: center;
+}
+
+#mision p{
+    width: 20%;
+    text-align: justify;
+    margin: auto;
+}
+
+
+#video{
+    text-align: center;
+    line-height: 1;
+    margin: auto;
+}
+
+iframe{
+    margin: 75px;
+    margin-top: 0;
+    width: 40%;
+    height: 450px;
+}
+
+
+
+#formulario{
+    padding: 10px;
+    width: 45%;
+    margin: auto;
+    margin-bottom: 25px;
+    background-color:gray;
+}
+
+
+#formulario h2{
+    text-align: center;
+    text-decoration: underline;
+    line-height: 2;
+    font-weight: bolder;
+    margin: 5px;
+    font-size: 20px; 
+}
+
+#formulario h3{
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+#formulario h4{
+    line-height: 2;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+
+#formulario label{
+    display: block;
+}
+
+#formulario input{
+    width: 95%;
+}
+
+#div-termino{
+    display: flex;
+}
+
+#div-termino input{
+    width: 13px;
+    margin-left: 10px;
+}
+
+#areatexto{
+    min-width: 95%;
+    max-width: 95%;
+    max-height: 150px;
+}
+
+#btnRegistrar{
+    width: 96%;
+}
+
+#pfooter{
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: black
+}
+
+#pfooter p, a{
+    display: inline-flex;
+    color: ghostwhite;
+    margin: 8px;
+}
+
+#pfooter a{
+    text-decoration: underline;
+}
+
+
+/* A continuacion se aplica la inclusividad */
+
+.modo-claro{
+    background-color:#fff;
+    color: black;
+}
+
+.modo-oscuro{
+    background-color: black;
+    color: #fff
+}
+
+body.fontsize{
+    font-size: x-large;
+}
+
+/* validacion de errores */
+
+p.noDisplay{
+    display: none;
+    color: red;
+}

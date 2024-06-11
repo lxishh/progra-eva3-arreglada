@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación 3</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script type="module" src="assets/js/script.js"></script>
+    <script type="module" src="assets/js/firebase.js"></script>
+</head>
+
+<body id="idBody" class="modo-claro">
+
+    <!-- Header decorativo con el titulo de la pagina. -->
+    <header id="pheader">
+        <h1>NotCo</h1>
+    </header>
+
+    <!-- nav para navegar entre las diferentes secciones;
+        para realizar esto se creo una lista desorganizada. -->
+    <nav id="pnav">
+        <ul class="opcionesmenu">
+            <li><a href="#problema">Problema</a></li>
+            <li><a href="#solucion">Solución</a></li>
+            <li><a href="#mision">Misión</a></li>
+            <li><a href="#video">Proceso</a></li>
+            <li><a href="#formulario">Contáctanos</a></li>
+            <button id="btnContraste">Contraste</button>
+            <button id="btnFuente">Fuente</button>
+        </ul>
+    </nav>
+
+    <!-- main que se utilizara de etiqueta "padre" para "guardar" y manipular las secciones creadas posteriormente en la pagina. -->
+    <main id="pmain">
+
+        <!-- Se crearan tres SECCIONES que tendran la misma estructura (id, h2, img, p);
+            un H2 donde se escribira algo llamativo y relacionado a lo que se hablara;
+            una etiqueta de IMAGEN que se obtiene a traves de una carpeta local:
+            y por ultimo un PARRAFO donde se agregara el texto relacionado  -->
+        <section id="problema">
+            <h2>La producción de productos animales daña a nuestro planeta</h2>
+            <img src="assets/img/problema.png" width="400px">
+            <p>Entonces, este es el tema: la producción mundial de alimentos, que se basa en la ganadería, usa más de un tercio de la superficie terrestre, y emite más CO2 que todo el transporte mundial en su conjunto. Sigue estándares ineficientes y abusivos, sin mencionar el mal uso del agua, la tierra y la energía.
+                Es la causa principal de la deforestación, de los gases de efecto invernadero y, prácticamente, de toda la destrucción medioambiental conocida por las personas. Si queremos que nuestro planeta sobreviva, tenemos que cambiar la forma en la que se hace nuestra comida.</p>
+        </section>
+
+        <section id="solucion">
+            <h2>Sacar a los animales de la ecuación</h2>
+            <img src="assets/img/historia.jpg" width="550">
+            <p>Cuando descubrimos que al sacar a los animales de la producción de alimentos protegeríamos al planeta, no nos preguntamos el por qué. Dijimos, Why Not.
+                La solución fue simple (para nuestros genios que aman la comida), crear un algoritmo que pueda aprender combinaciones infinitas de plantas para replicar los productos animales y que su sabor sea mucho mejor.</p>
+        </section>
+
+        <section id="mision">
+            <h2>Cambiando el día a día</h2>
+            <img src="assets/img/misión.png" width="400px">
+            <p>Hacemos un llamado a todos los fans de la comida y también a la industria alimentaria. Estamos aquí para hacer que las productos en base a plantas sean accesibles para todos, en cualquier lugar. Cambiemos el día a día con un bocado delicioso y a buen precio a la vez.</p>
+        </section>
+
+        <!-- Se creara una SECCION con un H2 y un VIDEO, para agregar este se hara uso de la etiqueta "IFRAME"; 
+            esta ETIQUETA y todos sus ATRIBUTOS nos la da el propio youtube, por lo cual solamente se debe copiar y pegar). -->
+        <section id="video">
+            <h2>Conoce a Giuseppe, la tecnología que hace realidad todo esto</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/b7hqUBmKJR0?si=KSWoFi4Ttti2kT4a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <!-- a continuacion se creara una SECCION de FORMULARIO, en la cual se incluiran LABELS, INPUT, SELECT, TEXTAREA Y BUTTON;
+            cabe recalcar que se utilizaran distintos TIPOS de input para cada campo. -->
+
+        <!-- los parrafos dentro de cada label/input solamente se muestran cuando hay un error de validacion
+            debido a que ahi se le cambia el display a block y se muestra, en cambio por defecto la clase noDisplay viene en display:'none' -->
+        <section id="formulario">
+            <h2>¡Hazte socio/a de NotCo!</h2>
+            <h3>Formulario de inscripción</h3>
+            <h4>*Todos los campos son requeridos</h4>
+            <!-- <form>  -->
+
+                <label for="nombre">Nombre*</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
+                <p class="noDisplay" id="pnombre">Debes ingresar un nombre</p>
+
+                <label for="correo">Correo*</label>
+                <input type="email" name="correo" id="correo" placeholder="Ingresa tu correo" required>
+                <p class="noDisplay" id="pcorreo">Debes ingresar un correo</p>
+
+                <label for="contraseña">Contraseña*</label>
+                <input type="password" name="contraseña" id="contraseña" placeholder="Ingresa tu contraseña">
+                <p class="noDisplay" id="pcontraseña">Debes ingresar una contraseña</p>
+
+                <label for="telefono">Teléfono*</label>
+                <input type="tel" name="telefono" id="telefono" placeholder="Ingresa tu teléfono">
+                <p class="noDisplay" id="ptelefono">Debes ingresar 9 numeros para que sea valido.</p>
+
+                <label for="fecha">Fecha de nacimiento</label>
+                <input type="date" name="fecha" id="fecha">
+                <p class="noDisplay" id="pfecha">Debes ingresar tu fecha de nacimiento</p>
+
+                <label for="genero">Género</label>
+                <select name="genero" id="genero">
+                    <option></option>
+                    <option>Masculino</option>
+                    <option>Femenino</option>
+                    <option>No especifica</option>
+                </select>
+                <p class="noDisplay" id="pgenero">Debes seleccionar un genero</p>
+
+                <label for="areatexto">Biografia</label>
+                <textarea name="areatexto" id="areatexto" placeholder="Escribe una breve descripción de ti"></textarea>
+                <p class="noDisplay" id="pareatexto">Debes entregar una descripción de usted.</p>
+
+                <div id="div-termino"> 
+                <label for="terminos">Acepta terminos y condiciones*</label>
+                <input type="checkbox" name="terminos" id="terminos">
+                </div>
+
+                <button type="button" id="btnRegistrar">Enviar</button>
+
+            <!-- </form> -->
+
+        </section>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Contraseña</th>
+                    <th>Teléfono</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>Género</th>
+                    <th>Biografía</th>
+                    <th>Terminos</th>
+                </tr>
+            </thead>
+            <tbody id="tbDatos"></tbody>
+        </table>
+
+        <div>
+            <h1>Actualizar Datos</h1>
+            <label for="UPDnombre">Nombre*</label>
+                <input type="text" name="UPDnombre" id="nombre" placeholder="Ingresa tu nombre" required>
+                <p class="noDisplay" id="UPDpnombre">Debes ingresar un nombre</p>
+
+                <label for="correo">Correo*</label>
+                <input type="email" name="UPDcorreo" id="UPDcorreo" placeholder="Ingresa tu correo" required>
+                <p class="noDisplay" id="pcorreo">Debes ingresar un correo</p>
+
+                <label for="contraseña">Contraseña*</label>
+                <input type="password" name="UPDcontraseña" id="UPDcontraseña" placeholder="Ingresa tu contraseña">
+                <p class="noDisplay" id="pcontraseña">Debes ingresar una contraseña</p>
+
+                <label for="telefono">Teléfono*</label>
+                <input type="tel" name="UPDtelefono" id="UPDtelefono" placeholder="Ingresa tu teléfono">
+                <p class="noDisplay" id="ptelefono">Debes ingresar 9 numeros para que sea valido.</p>
+
+                <label for="fecha">Fecha de nacimiento</label>
+                <input type="date" name="UPDfecha" id="UPDfecha">
+                <p class="noDisplay" id="pfecha">Debes ingresar tu fecha de nacimiento</p>
+
+                <label for="genero">Género</label>
+                <select name="UPDgenero" id="UPDgenero">
+                    <option></option>
+                    <option>Masculino</option>
+                    <option>Femenino</option>
+                    <option>No especifica</option>
+                </select>
+                <p class="noDisplay" id="pgenero">Debes seleccionar un genero</p>
+
+                <label for="areatexto">Biografia</label>
+                <textarea name="UPDareatexto" id="UPDareatexto" placeholder="Escribe una breve descripción de ti"></textarea>
+                <p class="noDisplay" id="pareatexto">Debes entregar una descripción de usted.</p>
+
+                <div id="div-termino"> 
+                <label for="terminos">Acepta terminos y condiciones*</label>
+                <input type="checkbox" name="UPDterminos" id="UPDterminos">
+                </div>
+
+                <button type="button" id="btnActualizar">Enviar</button>
+        </div>
+
+        
+
+    </main>
+
+    <!-- Se crea un footer en donde se agregan las redes sociales de la empresa, haciendo uso de la etiqueta "a" (enlaces);
+        ademas se le asigna el atributo de target="_blank" para que se abran en una nueva ventana;
+        "&copy;" hace referencia al signo de copyright. -->
+    <footer id="pfooter">
+        <p>&copy;NotCo 2024</p>
+        <a href="https://www.facebook.com/thenotcompany/" target="_blank">Facebook</a>
+        <a href="https://https//www.instagram.com/thenotco/" target="_blank">Instagram</a>
+        <a href="https://www.linkedin.com/company/the-not-co-/" target="_blank">Linkedin</a>
+        <a href="https://www.youtube.com/channel/UCT2H7LfjkiIQpusjjVlclxg" target="_blank">Youtube</a>
+    </footer>
+
+</body>
+</html>
